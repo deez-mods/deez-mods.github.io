@@ -40,6 +40,7 @@ const config: Config = {
       "classic",
       {
         docs: {
+          path: "./pages/docs",
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -47,6 +48,7 @@ const config: Config = {
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
+          path: "./pages/blog",
           showReadingTime: true,
           feedOptions: {
             type: ["rss", "atom"],
@@ -87,7 +89,11 @@ const config: Config = {
           position: "left",
           label: "Tutorial",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        {
+          to: "/blog",
+          label: "Blog",
+          position: "left",
+        },
         {
           href: "https://github.com/facebook/docusaurus",
           label: "GitHub",
