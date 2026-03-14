@@ -7,11 +7,13 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
+import { SITE_LINKS } from "../constants/links";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    // <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    <header className={clsx("hero hero--custom", styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
@@ -19,10 +21,17 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro"
+            className="button button--primary button--lg"
+            to={SITE_LINKS.CURSE_FORGE_PROFILE}
           >
-            Docusaurus Tutorial - 5min ⏱️
+            <img
+              src="/img/icons/curseforge.svg"
+              alt=""
+              width={20}
+              height={20}
+              style={{ marginRight: 8, verticalAlign: "middle" }}
+            />
+            curse forge
           </Link>
         </div>
       </div>

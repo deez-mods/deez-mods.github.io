@@ -5,8 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Deez Mods",
+  tagline: "Which mods? Deez Mods.",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -64,7 +64,11 @@ const config: Config = {
           onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: [
+            "./src/css/fonts.css",
+            "./src/css/theme.css",
+            "./src/css/styles.css",
+          ],
         },
       } satisfies Preset.Options,
     ],
@@ -74,15 +78,38 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: "dark",
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
-      title: "My Site",
+      title: "DeezMods",
+      style: "dark",
       logo: {
         alt: "My Site Logo",
-        src: "img/logo.svg",
+        src: "img/logo/logo_icon_color@0.5x.png",
       },
       items: [
+        {
+          type: "dropdown",
+          label: "Projects",
+          position: "left",
+          items: [
+            {
+              to: "/unified-ui",
+              label: "Unified UI",
+            },
+            {
+              label: "Emerald Craft",
+              href: "https://www.curseforge.com/minecraft-bedrock/addons/emerald-craft",
+            },
+          ],
+        },
+        {
+          to: "/news",
+          label: "News",
+          position: "left",
+        },
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
@@ -95,9 +122,16 @@ const config: Config = {
           position: "left",
         },
         {
-          href: "https://github.com/facebook/docusaurus",
-          label: "GitHub",
+          type: "html",
           position: "right",
+          value:
+            '<a class="nav-html-button" data-icon="github" href="https://github.com/deez-mods" target="_blank">GitHub</a>',
+        },
+        {
+          type: "html",
+          position: "right",
+          value:
+            '<a class="nav-html-button" data-icon="curseforge" href="https://www.curseforge.com/members/deezmods/projects" target="_blank">Curse</a>',
         },
       ],
     },
@@ -144,7 +178,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} DeezMods, HarleyCodes.`,
     },
     prism: {
       theme: prismThemes.github,

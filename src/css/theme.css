@@ -1,0 +1,141 @@
+/* Light Mode Removed */
+/* :root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+} */
+
+[data-theme="dark"] {
+  --ifm-color-primary: #ffaa00;
+  --ifm-color-primary-dark: #e69900;
+  --ifm-color-primary-darker: #d99000;
+  --ifm-color-primary-darkest: #b37700;
+  --ifm-color-primary-light: #ffb31a;
+  --ifm-color-primary-lighter: #ffb726;
+  --ifm-color-primary-lightest: #ffc34d;
+  --ifm-background-color: #1a082b;
+  --ifm-background-color-lighter: #2c183e;
+  --ifm-background-color-darker: #140423;
+  --ifm-code-font-size: 100%;
+  --ifm-font-color-base: #f5f5f5;
+  --ifm-font-color-base-inverse: #1a082b;
+  --ifm-font-family-base:
+    "Nunito", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.hero--custom {
+  --ifm-hero-background-color: var(--ifm-background-color);
+  --ifm-hero-text-color: var(--ifm-font-color-base-inverse);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero--custom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/img/site/hero_header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  inset: -10px;
+  z-index: 0;
+}
+
+.hero--custom > * {
+  position: relative;
+  z-index: 1;
+}
+
+.menu {
+  background-color: var(--ifm-background-color-lighter);
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.theme-doc-sidebar-container {
+  border-right: none;
+}
+
+.theme-layout-navbar {
+  padding-right: 0;
+}
+
+.theme-layout-footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-layout-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/img/site/hero_footer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(2px);
+  inset: -10px;
+  z-index: 0;
+}
+
+.theme-layout-footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-html-button {
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  border-radius: 4px;
+  background: var(--ifm-color-secondary, #ffaa00);
+  color: var(--ifm-font-color-base-inverse, #fff);
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.nav-html-button:hover {
+  background: var(--ifm-color-primary-dark, #e69900);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.nav-html-button[data-icon="github"]::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("/img/icons/github.svg") no-repeat center center;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-top: -3px;
+}
+
+.nav-html-button[data-icon="curseforge"]::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("/img/icons/curseforge.svg") no-repeat center center;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-top: -2px;
+}
