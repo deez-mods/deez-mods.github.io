@@ -46,6 +46,7 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          routeBasePath: "/",
         },
         blog: {
           path: "./pages/blog",
@@ -95,8 +96,13 @@ const config: Config = {
           label: "Projects",
           position: "left",
           items: [
+            // {
+            //   to: "/unified-ui",
+            //   label: "Unified UI",
+            // },
             {
-              to: "/unified-ui",
+              type: "docSidebar",
+              sidebarId: "hytale-unified-ui-sidebar",
               label: "Unified UI",
             },
             {
@@ -105,14 +111,14 @@ const config: Config = {
             },
           ],
         },
-        {
-          to: "/news",
-          label: "News",
-          position: "left",
-        },
+        // {
+        //   to: "/news",
+        //   label: "News",
+        //   position: "left",
+        // },
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "tutorial-sidebar",
           position: "left",
           label: "Tutorial",
         },
@@ -143,7 +149,7 @@ const config: Config = {
           items: [
             {
               label: "Tutorial",
-              to: "/docs/intro",
+              to: "/tutorial/intro",
             },
           ],
         },
