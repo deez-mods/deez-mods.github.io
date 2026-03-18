@@ -30,6 +30,7 @@
     Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --doc-sidebar-width: 350px;
 }
 
 .hero--custom {
@@ -164,4 +165,9 @@ h6 {
     "Apple Color Emoji",
     "Segoe UI Emoji",
     "Segoe UI Symbol";
+}
+
+.theme-code-block {
+  tab-size: 4;
+  -moz-tab-size: 4;
 }
