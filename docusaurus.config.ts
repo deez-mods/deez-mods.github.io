@@ -7,7 +7,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Deez Mods",
   tagline: "Which mods? Deez Mods.",
-  favicon: "img/favicon.ico",
+  //   favicon: "img/favicon.ico",
+  favicon: "img/logo/logo_icon_color@0.5x.png",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
