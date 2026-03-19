@@ -6,6 +6,17 @@
 }
 
 .featureImg {
-  height: 150px;
-  width: 150px;
+  object-fit: contain;
+  border-radius: 0.5em;
+  background-color: var(--ifm-font-color-base-inverse);
+}
+
+.featureCard {
+  border-radius: 1em;
+  border: 5px solid var(--ifm-background-color-darker);
+  background-color: var(--ifm-background-color-lighter);
+  padding: 1em 1em 1.5em 1em;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
 }

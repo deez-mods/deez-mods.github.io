@@ -1,3 +1,23 @@
+.display--flex {
+  display: flex;
+}
+
+.flex--grow {
+  flex-grow: 1;
+}
+
+.gap--1 {
+  gap: 1rem;
+}
+
+.gap--2 {
+  gap: 2rem;
+}
+
+.gap--3 {
+  gap: 3rem;
+}
+
 .flex--justify-center {
   justify-content: center;
 }

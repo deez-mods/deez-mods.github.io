@@ -8,7 +8,7 @@ const config: Config = {
   title: "Deez Mods",
   tagline: "Which mods? Deez Mods.",
   //   favicon: "img/favicon.ico",
-  favicon: "img/logo/logo_icon_color@0.5x.png",
+  favicon: "img/logo/deez_mods_icon_color@0.5x.png",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -89,7 +89,7 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "My Site Logo",
-        src: "img/logo/logo_icon_color@0.5x.png",
+        src: "img/logo/deez_mods_icon_color@0.5x.png",
       },
       items: [
         {
