@@ -31,6 +31,7 @@
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --doc-sidebar-width: 350px;
+  /* --ifm-code-background: #00ff0040; */
 }
 
 .hero--custom {

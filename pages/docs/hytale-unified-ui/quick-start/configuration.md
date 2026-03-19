@@ -2,22 +2,26 @@
 sidebar_position: 1
 ---
 
-# Quick Start
+# Configuration
 
-After <a href="installation">installing</a> the <strong>Unified UI</strong>. You use it immediately and start <a href="#customization-options">customizing</a> to you your liking.
+After [installing](installation) the **Unified UI**. You can use it immediately and start <a href="#customization-options">customizing</a> to you your liking.
 
 ## Display the UI
 
 Displaying the UI is as easy as running `/uui` in the chat box.
 
-## Admin Access
+<div class="image-card" style={{maxWidth: '550px'}}>
+	![Unified UI console command](./img/uui-console-command.png)
+</div>
+
+## Permissions
 
 To access admin features there are two permissions that can to be granted.
 
 - `com.deezmods.unifiedui.admin-read`
 - `com.deezmods.unifiedui.admin-write`
 
-### Read Access
+### Admin Read Access
 
 Admin read access allows the user to view information via chat commands.
 
@@ -27,11 +31,11 @@ Admin read access allows the user to view information via chat commands.
 
 See the `/help uui` command menu for more information.
 
-### Write Access
+### Admin Write Access
 
 Admin write access grants all of `com.deezmods.unifiedui.admin-read` options.
 
-This also adds addition options in the setting menu of <strong>Unified UI</strong>. Where you can make changes to how and what content is displayed.
+This also adds additional options in the setting menu of **Unified UI**. Where you can make changes to how and what content is displayed for all users.
 
 ## Customization Options
 

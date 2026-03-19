@@ -2,8 +2,6 @@
 sidebar_position: 2
 ---
 
-import { UnifiedUiLabel } from "@site/src/components/labels/unified-ui-label";
-
 # UuiExtension
 
 ## Class
@@ -22,11 +20,11 @@ public interface UuiExtension {
 
 ### getFeatures(PlayerRef) -> <u>[FeatureDefinition](/hytale-unified-ui/scripting-reference/definitions/featureDefinition)</u>[]
 
-Get features is called when the player open the <UnifiedUiLabel strong/> page. This gives the developer an opportunity to set custom logic based on the player. The initial call it to determine information about the feature, and to provide additional callback's when the feature is selected to render.
+Get features is called when the player open the **Unified UI** page. This gives the developer an opportunity to set custom logic based on the player. The initial call it to determine information about the feature, and to provide additional callback's when the feature is selected to render.
 
 ### getCommands(PlayerRef) -> <u>[CommandDefinition](/hytale-unified-ui/scripting-reference/definitions/commandDefinition)</u>[]
 
-Get commands is called when the player open the <UnifiedUiLabel strong/> page. This gives the developer an opportunity to set custom logic based on the player. The returned CommandDefinition's will then be used immediately to render in the commands panel.
+Get commands is called when the player open the **Unified UI** page. This gives the developer an opportunity to set custom logic based on the player. The returned CommandDefinition's will then be used immediately to render in the commands panel.
 
 ### onPageClose
 

@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # Installation
 
-Setup and configure <strong>Unified UI</strong> on your server.
+Setup and configure **Unified UI** on your server.
 
 ## Install Plugin
 
-<strong>Unified UI</strong> consists of two plugins. The API and the Core plugin.
+**Unified UI** consists of two plugins. The API and the Core plugin.
 
 1. Download the latest versions.
    - INSERT LINK -> API
@@ -19,7 +19,7 @@ Setup and configure <strong>Unified UI</strong> on your server.
 :::info
 
 - When the server first starts after mods have been installed, it will automatically generate a config file under `/mods/DeezMods_UnifiedUI`.
-- It is recommended to use the <strong>Unified UI</strong> settings menu to make any changes, however if something in the UI is unavailable, you can change here.
+- It is recommended to use the **Unified UI** settings menu to make any changes, however if something in the UI is unavailable, you can change here.
 
 :::
 

@@ -1,3 +1,10 @@
 .flex--justify-center {
   justify-content: center;
 }
+
+.image-card img {
+  border-radius: 7.5px;
+  overflow: hidden;
+  box-shadow: 0 0 5px 3px
+    color-mix(in srgb, var(--ifm-color-primary) 50%, transparent);
+}
