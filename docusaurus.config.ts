@@ -145,7 +145,7 @@ const config: Config = {
           items: [
             {
               label: "Unified UI - Dev",
-              to: "/hytale-unified-ui/developer-section/introduction",
+              to: "/hytale-unified-ui/developer-section/installation-and-setup",
             },
           ],
         },
