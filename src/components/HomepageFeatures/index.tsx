@@ -4,7 +4,7 @@ import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 
 type FeatureItem = {
-  imageAlt: string;
+  name: string;
   imagePath: string;
   description: ReactNode;
   internalLink?: string;
@@ -13,70 +13,78 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    imageAlt: "UnifiedUI",
-    imagePath: "img/logo/unified_ui_logo_full_color@0.5x.png",
+    name: "UnifiedUI",
+    imagePath: "img/logo/unified_ui_logo_square_color_plain@0.5x.png",
     description: (
       <>
         A Hytale mod to expand on the current user interface. Allowing players,
         server admins, and modder's to inject custom menu options or commands.
       </>
     ),
-    internalLink: "/hytale-unified-ui/quick-start/configuration",
+    internalLink: "/hytale-unified-ui/introduction/summary",
     externalLink: "https://github.com/deez-mods",
   },
   {
-    imageAlt: "Emerald Craft",
-    imagePath: "img/logo/emerald_craft_logo.png",
+    name: "UnifiedUI: Admin Essentials",
+    imagePath:
+      "img/logo/unified_ui_admin_essentials_logo_square_color@0.5x.png",
     description: (
       <>
-        Enhance your Vanilla Minecraft experience with this add-on, a carefully
-        balanced addon designed to keep you engaged from the early game to the
-        epic late stages.
+        An extension for UnifiedUI that adds a collection of useful features for
+        server administrators.
       </>
     ),
+    internalLink: "/hytale-unified-ui/official-extensions/admin-essentials",
     externalLink:
-      "https://www.curseforge.com/minecraft-bedrock/addons/emerald-craft",
+      "https://github.com/deez-mods/hytale-unified-ui-admin-essentials",
   },
 ];
 
 function Feature(props: FeatureItem) {
-  const { imageAlt, imagePath, description, internalLink, externalLink } =
-    props;
+  const { name, imagePath, description, internalLink, externalLink } = props;
 
   const showLinks = internalLink || externalLink;
 
   return (
     <div className={clsx("col col--4", styles.featureCard)}>
-      <div className="text--center">
-        <img
-          alt={imageAlt}
-          src={imagePath}
-          className={styles.featureImg}
-          role="img"
-        />
+      <div className="display--flex flex--justify-center flex--align-center">
+        <div className="text--center">
+          <img
+            alt={name}
+            src={imagePath}
+            className={styles.featureImg}
+            role="img"
+          />
+        </div>
+        {showLinks && (
+          <div className="display--flex flex--column flex--grow flex--justify-center">
+            {internalLink && (
+              <a
+                className="button button--secondary"
+                href={internalLink}
+                style={{ marginBottom: "0.5em" }}
+              >
+                View Project
+              </a>
+            )}
+            {externalLink && (
+              <a
+                className="button button--primary"
+                href={externalLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ marginTop: "0.5em" }}
+              >
+                Get Addon
+              </a>
+            )}
+          </div>
+        )}
       </div>
+      <h2 className="text--center padding-horiz--md flex--grow">{name}</h2>
       <div className="text--center padding-horiz--md flex--grow">
         <p>{description}</p>
       </div>
-      {showLinks && (
-        <div className="display--flex flex--justify-center gap--1">
-          {internalLink && (
-            <a className="button button--secondary" href={internalLink}>
-              View Project
-            </a>
-          )}
-          {externalLink && (
-            <a
-              className="button button--primary"
-              href={externalLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get Addon
-            </a>
-          )}
-        </div>
-      )}
     </div>
   );
 }

@@ -7,8 +7,7 @@
 
 .featureImg {
   object-fit: contain;
-  border-radius: 0.5em;
-  background-color: var(--ifm-font-color-base-inverse);
+  height: 7em;
 }
 
 .featureCard {

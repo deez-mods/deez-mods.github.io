@@ -6,6 +6,10 @@
   flex-grow: 1;
 }
 
+.flex--column {
+  flex-direction: column;
+}
+
 .gap--1 {
   gap: 1rem;
 }
@@ -20,6 +24,10 @@
 
 .flex--justify-center {
   justify-content: center;
+}
+
+.flex--align-center {
+  align-items: center;
 }
 
 .image-card img {

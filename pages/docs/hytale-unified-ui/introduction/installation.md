@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Installation
@@ -11,8 +11,8 @@ Setup and configure **Unified UI** on your server.
 **Unified UI** consists of two plugins. The API and the Core plugin.
 
 1. Download the latest versions.
-   - INSERT LINK -> API
-   - INSERT LINK -> Core
+   - [UnifiedUI](https://www.curseforge.com/hytale/mods/unifiedui/files/all)
+   - [UnifiedUI:API](https://www.curseforge.com/hytale/mods/unifiedui-api/files/all)
 2. Place the JAR files into your server's `/mods` folder
 3. Restart the server
 
@@ -26,3 +26,7 @@ Setup and configure **Unified UI** on your server.
 ## Display the UI
 
 Displaying the UI is as easy as running `/uui` in the chat box.
+
+<div class="image-card" style={{maxWidth: '550px'}}>
+	![Unified UI console command](./img/uui-console-command.png)
+</div>
