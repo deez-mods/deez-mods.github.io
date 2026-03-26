@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
     internalLink: "/hytale-unified-ui/introduction/summary",
-    externalLink: "https://github.com/deez-mods",
+    externalLink: "https://www.curseforge.com/hytale/mods/unifiedui",
   },
   {
     name: "UnifiedUI: Admin Essentials",
@@ -36,7 +36,7 @@ const FeatureList: FeatureItem[] = [
     ),
     internalLink: "/hytale-unified-ui/official-extensions/admin-essentials",
     externalLink:
-      "https://github.com/deez-mods/hytale-unified-ui-admin-essentials",
+      "https://www.curseforge.com/hytale/mods/unifiedui-admin-essentials",
   },
 ];
 
