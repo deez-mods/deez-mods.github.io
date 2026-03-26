@@ -10,7 +10,7 @@ sidebar_position: 1
 package com.deezmods.unifiedui.api;
 
 public class UuiApi extends JavaPlugin {
-	public static void registerExtension(UuiExtension extension);
+	public static void registerExtension(UuiExtension extension, JavaPlugin plugin);
 }
 ```
 
@@ -23,7 +23,7 @@ public class Example extends JavaPlugin {
 	@Override
 	public CompletableFuture<Void> preLoad() {
 		super.preLoad();
-		UuiApi.registerExtension(new ExampleExtension());
+		UuiApi.registerExtension(new ExampleExtension(), this);
 		return CompletableFuture.completedFuture(null);
 	}
 }
