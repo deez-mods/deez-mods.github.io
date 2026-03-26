@@ -45,26 +45,25 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           routeBasePath: "/",
         },
-        blog: {
-          path: "./pages/blog",
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
-        },
+        // blog: {
+        //   path: "./pages/blog",
+        //   showReadingTime: true,
+        //   feedOptions: {
+        //     type: ["rss", "atom"],
+        //     xslt: true,
+        //   },
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+        //   // Useful options to enforce blogging best practices
+        //   onInlineTags: "warn",
+        //   onInlineAuthors: "warn",
+        //   onUntruncatedBlogPosts: "warn",
+        // },
         theme: {
           customCss: [
             "./src/css/fonts.css",
@@ -97,10 +96,6 @@ const config: Config = {
           label: "Projects",
           position: "left",
           items: [
-            // {
-            //   to: "/unified-ui",
-            //   label: "Unified UI",
-            // },
             {
               type: "docSidebar",
               sidebarId: "hytale-unified-ui-sidebar",
@@ -117,17 +112,17 @@ const config: Config = {
         //   label: "News",
         //   position: "left",
         // },
-        {
-          type: "docSidebar",
-          sidebarId: "tutorial-sidebar",
-          position: "left",
-          label: "Tutorial",
-        },
-        {
-          to: "/blog",
-          label: "Blog",
-          position: "left",
-        },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "tutorial-sidebar",
+        //   position: "left",
+        //   label: "Tutorial",
+        // },
+        // {
+        //   to: "/blog",
+        //   label: "Blog",
+        //   position: "left",
+        // },
         {
           type: "html",
           position: "right",
@@ -146,11 +141,11 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Dev Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "/tutorial/intro",
+              label: "Unified UI - Dev",
+              to: "/hytale-unified-ui/developer-section/introduction",
             },
           ],
         },
@@ -158,29 +153,21 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "X",
-              href: "https://x.com/docusaurus",
+              label: "CurseForge",
+              href: "https://www.curseforge.com/members/deezmods/projects",
             },
           ],
         },
         {
           title: "More",
           items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
+            // {
+            //   label: "Blog",
+            //   to: "/blog",
+            // },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/deez-mods",
             },
           ],
         },
