@@ -57,9 +57,9 @@ If using the full support options, then add `DeezMods:UnifiedUI` to the Dependen
   },
 ```
 
-## Add Server Mods Files
+## Add Server Mod Files
 
-In addition to adding the project dependencies, ensure the mod files are also save to the mods folder of the hytale world you are testing on.
+In addition to adding the project dependencies, ensure the mod files are also saved to the mods folder of the hytale world you are testing on.
 
 1. Download the latest versions.
    - [UnifiedUI](https://www.curseforge.com/hytale/mods/unifiedui/files/all)
