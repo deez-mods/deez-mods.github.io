@@ -34,8 +34,8 @@ public class ExampleFeature implements UuiExtension {
 
 		// Initialize the Builder
 		var featureBuilder = new FeatureDefinition.Builder(
-			"hello.world",	// Feature ID
-			"Hello World"	// Display Name
+			"counter",	// Feature ID
+			"Counter"	// Display Name
 		);
 
 		// OPTION A: Build the interface using inline method.
