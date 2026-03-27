@@ -39,7 +39,7 @@ Displaying the UI is as easy as running `/uui` in the chat box. For additional c
 
 ## Developers
 
-Here is a high-level preview of the interface you would be working with. The main entry point for extensions is three methods. Read more at [https://deezmods.com/hytale-unified-ui/developer-section/introduction](https://deezmods.com/hytale-unified-ui/developer-section/introduction).
+Here is a high-level preview of the interface you would be working with. The main entry point for extensions is three methods. Read more here [Installation and Setup](/hytale-unified-ui/developer-section/installation-and-setup).
 
 ```Java
 package com.deezmods.unifiedui.api;
