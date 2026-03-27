@@ -35,24 +35,22 @@ var command = commandBuilder.build();
 This example demonstrates how you can define a command as a callback function, and leverage the `playerRef` to do some creative things.
 
 ```Java
-public CompletableFuture<List<CommandDefinition>> getCommands(PlayerRef playerRef) {
-	// Initialize with Builder
-	var commandBuilder = new CommandDefinition.Builder(
-		"hello.world",		// Command ID
-		"Hello World",		// Command Display Name
-		"Say Hello World!"	// Command Description
+// Initialize with Builder
+var commandBuilder = new CommandDefinition.Builder(
+	"hello.world",		// Command ID
+	"Hello World",		// Command Display Name
+	"Say Hello World!"	// Command Description
+);
+// Define as dynamic command that will be processed at runtime.
+commandBuilder.withEventCallback((Map<String, String> _) -> CompletableFuture.supplyAsync(() -> {
+	playerRef.sendMessage(
+		Message.raw("Hello World")
 	);
-	// Define as dynamic command that will be processed at runtime.
-	commandBuilder.withEventCallback((Map<String, String> _) -> CompletableFuture.supplyAsync(() -> {
-		playerRef.sendMessage(
-			Message.raw("Hello World")
-		);
-		return null;
-	}));
-	// Build and return command.
-	var command = commandBuilder.build();
-	return CompletableFuture.completedFuture(List.of(command));
-}
+	return null;
+}));
+// Build and return command.
+var command = commandBuilder.build();
+return CompletableFuture.completedFuture(List.of(command));
 ```
 
 ## Input Argument - Raw Command
