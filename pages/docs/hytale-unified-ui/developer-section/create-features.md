@@ -23,15 +23,16 @@ This demonstrates defining the UI with `UICommandBuilder`, handling the dynamic 
 
 Take note of how `playerCounter` is declared. The instance of ExampleFeature lives on the server, but when `getFeatures()` is called, you have access to the `playerRef` and can narrow down to the current player that the content is being rendered for. This is just an example, but in a real-world situation you would access a static instance, or pass a provider service to the constructor of `ExampleFeature` to supply outside data.
 
+<div class="image-card">
+	![Screenshot](img/feature-counter-screenshot.png)
+</div>
+
 ```Java {15-16,23-24}
 public class ExampleFeature implements UuiExtension {
 	private final Map<UUID, Integer> playerCounter = new HashMap<>();
 
 	@Override
 	public CompletableFuture<List<FeatureDefinition>> getFeatures(PlayerRef playerRef) {
-		// Get count from outside scope, this will live passed getFeatures() call.
-		int currentCount = playerCounter.getOrDefault(playerRef.getUuid(), 0);
-
 		// Initialize the Builder
 		var featureBuilder = new FeatureDefinition.Builder(
 			"counter",	// Feature ID
@@ -40,14 +41,16 @@ public class ExampleFeature implements UuiExtension {
 
 		// OPTION A: Build the interface using inline method.
 		featureBuilder.withBuildUserInterface((builder) -> CompletableFuture.supplyAsync(() -> {
+			int currentCount = playerCounter.getOrDefault(playerRef.getUuid(), 0);
 			var filePath = "Example/Counter.ui";
 			builder.append("", filePath);
-			builder.set("#CountValue.Text", currentCount);
+			builder.set("#CountValue.Text", String.valueOf(currentCount));
 			return null;
 		}));
 
 		// OPTION B: Build the interface using file method.
 		featureBuilder.withBuildUserInterface((builder) -> CompletableFuture.supplyAsync(() -> {
+			int currentCount = playerCounter.getOrDefault(playerRef.getUuid(), 0);
 			var doc = """
 				Group #RootElement {
 					Anchor: (Full: 0);
@@ -93,8 +96,8 @@ public class ExampleFeature implements UuiExtension {
 				if (!action.equals("increment")) {
 					return false;
 				}
-				var count = playerCounter.getOrDefault(playerRef.getUuid(), 0);
-				playerCounter.put(playerRef.getUuid(), count + 1);
+				var currentCount = playerCounter.getOrDefault(playerRef.getUuid(), 0);
+				playerCounter.put(playerRef.getUuid(), currentCount + 1);
 				return true;
 			})
 		);
@@ -120,21 +123,22 @@ public class ExampleFeature implements UuiExtension {
 ```json title="Common/UI/Custom/Example/Counter.ui"
 // NOTE: copy/pasting this directly could result in error due to tab space parsing in Hytale.
 
+$Common = "../Common.ui";
 $UuiContainer = "../UnifiedUI/Shared/Container.ui";
+$UuiTypography = "../UnifiedUI/Shared/Typography.ui";
 
 $UuiContainer.@ContainerSimple {
-	#Content {
-		LayoutMode: MiddleCenter;
-		Label {
-			Text: "Lets Count!";
-		}
-		Label #CountValue {
-			Text: "";
-		}
-		TextButton #AddButton {
-			Anchor: (Width: 100);
-			Text: "Plus One";
-		}
-	}
+    #Content {
+        LayoutMode: MiddleCenter;
+        $UuiTypography.@LabelH3 {
+            Text: "Lets Count!";
+        }
+        $UuiTypography.@LabelH1 #CountValue {
+            Text: "";
+        }
+        $Common.@SmallSecondaryTextButton #AddButton {
+            Text: "Plus One";
+        }
+    }
 }
 ```
