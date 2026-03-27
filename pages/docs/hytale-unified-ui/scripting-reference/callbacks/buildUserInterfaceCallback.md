@@ -1,6 +1,6 @@
 # BuildUserInterfaceCallback
 
-## Class
+## Definition
 
 ```java title="com.deezmods.unifiedui.api.callbacks.BuildUserInterfaceCallback"
 package com.deezmods.unifiedui.api.callbacks;

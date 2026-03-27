@@ -1,6 +1,6 @@
 # CommandSortingGroup
 
-## Class
+## Definition
 
 ```java title="com.deezmods.unifiedui.api.enums.CommandSortingGroup"
 package com.deezmods.unifiedui.api.enums;

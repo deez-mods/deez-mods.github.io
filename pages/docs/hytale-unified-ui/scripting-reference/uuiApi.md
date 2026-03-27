@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # UuiApi
 
-## Class
+## Definition
 
 ```java title="com.deezmods.unifiedui.api.UuiApi"
 package com.deezmods.unifiedui.api;

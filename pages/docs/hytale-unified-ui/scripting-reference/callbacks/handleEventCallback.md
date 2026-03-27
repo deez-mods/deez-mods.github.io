@@ -1,6 +1,6 @@
 # HandleEventCallback
 
-## Class
+## Definition
 
 ```java title="com.deezmods.unifiedui.api.callbacks.HandleEventCallback"
 package com.deezmods.unifiedui.api.callbacks;

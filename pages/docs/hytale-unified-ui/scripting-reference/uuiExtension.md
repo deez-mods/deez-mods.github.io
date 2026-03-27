@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # UuiExtension
 
-## Class
+## Definition
 
 ```java title="com.deezmods.unifiedui.api.UuiExtension"
 package com.deezmods.unifiedui.api;
@@ -18,11 +18,15 @@ public interface UuiExtension {
 
 ## Methods
 
-### getFeatures(PlayerRef) -> <u>[FeatureDefinition](/hytale-unified-ui/scripting-reference/definitions/featureDefinition)</u>[]
+### getFeatures(PlayerRef)
+
+**Returns:** [FeatureDefinition[]](/hytale-unified-ui/scripting-reference/definitions/featureDefinition)
 
 Get features is called when the player open the **Unified UI** page. This gives the developer an opportunity to set custom logic based on the player. The initial call it to determine information about the feature, and to provide additional callback's when the feature is selected to render.
 
-### getCommands(PlayerRef) -> <u>[CommandDefinition](/hytale-unified-ui/scripting-reference/definitions/commandDefinition)</u>[]
+### getCommands(PlayerRef)
+
+**Returns:** [CommandDefinition[]](/hytale-unified-ui/scripting-reference/definitions/commandDefinition)
 
 Get commands is called when the player open the **Unified UI** page. This gives the developer an opportunity to set custom logic based on the player. The returned CommandDefinition's will then be used immediately to render in the commands panel.
 
