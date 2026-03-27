@@ -27,7 +27,7 @@ Take note of how `playerCounter` is declared. The instance of ExampleFeature liv
 	![Screenshot](img/feature-counter-screenshot.png)
 </div>
 
-```Java {15-16,23-24}
+```Java {12-19,21-48}
 public class ExampleFeature implements UuiExtension {
 	private final Map<UUID, Integer> playerCounter = new HashMap<>();
 
