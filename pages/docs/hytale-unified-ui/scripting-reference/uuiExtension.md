@@ -10,9 +10,10 @@ sidebar_position: 2
 package com.deezmods.unifiedui.api;
 
 public interface UuiExtension {
-	CompletableFuture<List<FeatureDefinition>> getFeatures(PlayerRef playerRef);
-	CompletableFuture<List<CommandDefinition>> getCommands(PlayerRef playerRef);
-	CompletableFuture<Void> onPageClose();
+	default CompletableFuture<List<FeatureDefinition>> getFeatures(PlayerRef playerRef);
+	default CompletableFuture<List<CommandDefinition>> getCommands(PlayerRef playerRef);
+	default CompletableFuture<List<StatDefinition>> getStats(PlayerRef playerRef);
+	default CompletableFuture<Void> onPageClose();
 }
 ```
 
@@ -29,6 +30,12 @@ Get features is called when the player open the **Unified UI** page. This gives 
 **Returns:** [CommandDefinition[]](/hytale-unified-ui/scripting-reference/definitions/commandDefinition)
 
 Get commands is called when the player open the **Unified UI** page. This gives the developer an opportunity to set custom logic based on the player. The returned CommandDefinition's will then be used immediately to render in the commands panel.
+
+### getStats(PlayerRef)
+
+**Returns:** [StatDefinition[]](/hytale-unified-ui/scripting-reference/definitions/statDefinition)
+
+Get stats is called when the player open the **Unified UI** page. This gives the developer an opportunity to set custom logic based on the player. The returned StatDefinition's will then be used immediately to render in the stats panel.
 
 ### onPageClose
 
@@ -48,6 +55,12 @@ public class ExampleExtension implements UuiExtension {
 	public CompletableFuture<List<CommandDefinition>> getCommands(PlayerRef playerRef) {
 		List<CommandDefinition> commandDefinitions = new ArrayList<>();
 		return CompletableFuture.completedFuture(commandDefinitions);
+	}
+
+	@Override
+	public CompletableFuture<List<StatDefinition>> getStats(PlayerRef playerRef) {
+		List<StatDefinition> statDefinitions = new ArrayList<>();
+		return CompletableFuture.completedFuture(statDefinitions);
 	}
 
 	@Override
